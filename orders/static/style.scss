@@ -1,0 +1,49 @@
+.login-form {
+    width: 500px;
+    height: 370px;
+    background-color: black;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: 100px;
+}
+
+.login-form label, .register-form label {
+    color: white;
+    font-size: 20px;
+}
+
+.register-form .inp-box, .login-form .inp-box{
+    width: 400px;
+    height: 35px;
+}
+
+.login-form h1, .register-form h1 {
+    color: white;
+}
+
+.user-name {
+    margin-top: 25px;
+}
+
+.btn {
+    margin-top: 15px;
+}
+
+.register-form {
+    width: 500px;
+    height: 720px;
+    background-color: black;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#fname {
+    margin-top: 25px;
+}
