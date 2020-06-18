@@ -1,6 +1,6 @@
 .login-form {
   width: 500px;
-  height: 370px;
+  height: 400px;
   background-color: black;
   padding: 25px;
   border-radius: 10px;
@@ -33,7 +33,7 @@
 
 .register-form {
   width: 500px;
-  height: 720px;
+  height: 760px;
   background-color: black;
   padding: 25px;
   border-radius: 10px;
@@ -45,5 +45,14 @@
 
 #fname {
   margin-top: 25px;
+}
+
+.error {
+  margin-top: 20px;
+}
+
+.error-msg {
+  color: white;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
