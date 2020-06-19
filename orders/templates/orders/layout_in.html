@@ -48,18 +48,27 @@
                 <hr>
                 <ul class="list-unstyled components">
                     <li class="active">
-                        <a href="">Action 1</a>
+                        <a href="">Menu</a>
                     </li>
                     <li>
-                        <a href="">Action 2</a>
+                        <a href="">Shopping Cart</a>
+                    </li>
+                    <li>
+                        <a href="">Confirm Order</a>
+                    </li>
+                    <li>
+                        <a href="">View Your Orders</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'accountDetails_view' %}">Account Details</a>
                     </li>
                     <li class="logout-warn">
                         <a href="{% url 'logout_view' %}">Logout</a>
                     </li>
                 </ul>
             </nav>
+            {% block body %}
+            {% endblock %}
         </div>
-        {% block body %}
-        {% endblock %}
     </body>
 </html>

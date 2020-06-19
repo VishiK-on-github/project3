@@ -87,7 +87,7 @@
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background-color: black;
+  background-color: #505050;
   height: 100vh;
   padding: 15px;
 }
@@ -104,12 +104,32 @@
   margin-top: 0px;
 }
 
+.list-unstyled li {
+  padding: 10px;
+}
+
 .list-unstyled li a {
   color: white;
   font-size: large;
+  text-decoration: none;
 }
 
 .logout-warn a:hover {
   color: red;
+}
+
+.acc-detail {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 90px;
+}
+
+.acc-detail h3, .acc-detail h6 {
+  color: white;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */

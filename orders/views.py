@@ -45,6 +45,8 @@ def register_view(request):
         first_name = data.get("fname")
         last_name = data.get("lname") 
 
+        # More filtering required.
+
         if password != confirm_password:
             return render(request, "orders/register.html", {"title": "Register", "Message": "The Passwords dont match !"})
 
@@ -61,3 +63,19 @@ def register_view(request):
 
 def homepage_view(request):
     return render(request, "orders/homepage.html", {"title": "Homepage", "Username": request.user.username})
+
+def accountDetails_view(request):
+    username = request.user.username
+    first_name = request.user.first_name
+    last_name = request.user.last_name
+    email = request.user.email
+
+    context = {
+        "title": "Account Details",
+        "Username": username,
+        "FirstName": first_name,
+        "LastName": last_name,
+        "Email": email
+    }
+
+    return render(request, "orders/accountDetails.html", context)
