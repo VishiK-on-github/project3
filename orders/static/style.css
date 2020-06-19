@@ -6,7 +6,8 @@
   border-radius: 10px;
   margin: 0 auto;
   opacity: 0.9;
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-bottom: 100px;
 }
 
 .login-form label, .register-form label {
@@ -39,7 +40,7 @@
   border-radius: 10px;
   margin: 0 auto;
   opacity: 0.9;
-  margin-top: 100px;
+  margin-top: 140px;
   margin-bottom: 100px;
 }
 
@@ -54,5 +55,23 @@
 .error-msg {
   color: white;
   text-align: center;
+}
+
+.navbar {
+  background-color: black;
+  opacity: 0.95;
+}
+
+.navbar h2 {
+  margin-left: 10px;
+  color: white;
+}
+
+.login-link {
+  margin-right: 15px;
+}
+
+.form-inline h5 a {
+  color: silver;
 }
 /*# sourceMappingURL=style.css.map */

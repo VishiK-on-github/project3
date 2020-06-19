@@ -7,7 +7,7 @@ from orders.models import RegularPizza, SicilianPizza, Salad, Sub, Pasta, Dinner
 # Create your views here.
 def index(request):
     if request.user.is_authenticated:
-        return render(request, "orders/homepage.html", {"title": "Homepage"})
+        return HttpResponseRedirect(reverse('homepage_view'))
     else:
         return render(request, "orders/login.html", {"title": "Login"})
 
@@ -16,13 +16,18 @@ def login_view(request):
         data = request.POST.copy()
         username = data.get("username")
         password = data.get("password")
+
+        if username == '' or password == '':
+            return render(request, "orders/login.html", {"title": "Login", "Message": "Any one of the fields is empty !"})
+
         user = authenticate(username=username, password=password)
+
         if user is not None:
             login(request, user)
-            # Go to Homepage. 
-            return render(request, "orders/homepage.html", {"title": "Homepage"})
+            return HttpResponseRedirect(reverse('homepage_view'))
         else:
             return render(request, "orders/login.html", {"title": "Login", "Message": "Username or password is incorrect !"})
+            
     elif request.method == "GET":
         return render(request, "orders/login.html", {"title": "Login"})
 
@@ -53,3 +58,6 @@ def register_view(request):
     elif request.method == "GET":
         return render(request, "orders/register.html", {"title": "Register"})
     
+
+def homepage_view(request):
+    return render(request, "orders/homepage.html", {"title": "Homepage", "Username": request.user.username})
