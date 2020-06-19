@@ -12,20 +12,53 @@
                 background-repeat: no-repeat;
             }
         </style>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
         {% block head %}
         {% endblock %}
     </head>
     <body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            
+            });
+        </script>
         <nav class="navbar">
             <a class="navbar-brand">
                 <img src="/static/images_used/pinocchio_img.gif" width="15" height="45" class="d-inline-block align-top" alt="">
-                <h2 class="d-inline-block align-top">Welcome, {{User_fname}}</h2>
+                <h2 class="d-inline-block align-top">Pinnochio’s Pizza & Subs</h2>
             </a>
           
             <div class="form-inline my-2 my-lg-0">
-                <h5><a class="login-link" href="{% url 'logout_view' %}">Logout</a></h5>
+                <button type="button" class="btn btn-outline-light" id="sidebarCollapse">...</button>
             </div>
         </nav>
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Welcome, {{Username}}</h3>
+                </div>
+                <hr>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="">Action 1</a>
+                    </li>
+                    <li>
+                        <a href="">Action 2</a>
+                    </li>
+                    <li class="logout-warn">
+                        <a href="{% url 'logout_view' %}">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         {% block body %}
         {% endblock %}
     </body>
