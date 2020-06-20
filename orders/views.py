@@ -79,3 +79,19 @@ def accountDetails_view(request):
     }
 
     return render(request, "orders/accountDetails.html", context)
+
+def menu_view(request):
+
+    context = {
+        "title": "Menu", 
+        "Username": request.user.username,
+        "RegularPizza": RegularPizza.objects.all(),
+        "SicilianPizza": SicilianPizza.objects.all(),
+        "Toppings": Topping.objects.all(),
+        "Subs": Sub.objects.all(),
+        "Pasta": Pasta.objects.all(),
+        "Salads": Salad.objects.all(),
+        "DinnerPlatter": DinnerPlatter.objects.all()
+    }
+
+    return render(request, "orders/menu.html", context)

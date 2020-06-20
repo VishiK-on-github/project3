@@ -120,7 +120,6 @@
 
 .acc-detail {
   width: 500px;
-  height: 300px;
   margin: 0 auto;
   background-color: black;
   padding: 25px;
@@ -131,5 +130,30 @@
 .acc-detail h3, .acc-detail h6 {
   color: white;
   padding: 5px;
+}
+
+.menu-div {
+  background-color: black;
+  height: 600px;
+  margin: 0 auto;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-top: 50px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.tab-pane {
+  padding: 20px;
+  overflow-y: auto;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
