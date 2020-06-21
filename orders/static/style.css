@@ -88,8 +88,8 @@
   min-width: 250px;
   max-width: 250px;
   background-color: #505050;
-  height: 100vh;
   padding: 15px;
+  min-height: 120vh;
 }
 
 #sidebar.active {
@@ -120,6 +120,7 @@
 
 .acc-detail {
   width: 500px;
+  max-height: 300px;
   margin: 0 auto;
   background-color: black;
   padding: 25px;
@@ -134,11 +135,17 @@
 
 .menu-div {
   background-color: black;
-  height: 600px;
   margin: 0 auto;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.menu-div h2 {
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
 
 .nav-item a {
@@ -153,7 +160,30 @@
 
 .tab-pane {
   padding: 20px;
-  overflow-y: auto;
   color: white;
+}
+
+.tab-pane h3 {
+  text-align: center;
+}
+
+.tab-pane table {
+  margin: 0 auto;
+}
+
+.tab-pane tr {
+  padding: 3px;
+}
+
+.tab-pane th, .tab-pane td {
+  text-align: left;
+  padding: 10px;
+}
+
+.tab-pane button {
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */

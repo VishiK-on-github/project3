@@ -24,55 +24,118 @@
             <a class="nav-link" id="dinnerplatter-tab" data-toggle="tab" href="#dinnerplatter" role="tab" aria-controls="dinnerplatter" aria-selected="false">Dinner Platter</a>
         </li>
     </ul>
+    <h2>Menu</h2>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="regularpizza" role="tabpanel" aria-labelledby="regularpizza-tab">
             <h3>Regular Pizza</h3>
-            {% for pizza in RegularPizza %}
-            <br>
-            {{pizza.name}} -- {{pizza.small}} -- {{pizza.large}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Small</th>
+                    <th>Large</th>
+                </tr>
+                {% for pizza in RegularPizza %}
+                <tr>
+                    <td>{{pizza.name}}</td>
+                    <td>$ {{pizza.small}}</td>
+                    <td>$ {{pizza.large}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="sicilianpizza" role="tabpanel" aria-labelledby="sicilianpizza-tab">
             <h3>Sicilian Pizza</h3>
-            {% for pizza in SicilianPizza %}
-            <br>
-            {{pizza.name}} -- {{pizza.small}} -- {{pizza.large}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Small</th>
+                    <th>Large</th>
+                </tr>
+                {% for pizza in SicilianPizza %}
+                <tr>
+                    <td>{{pizza.name}}</td>
+                    <td>$ {{pizza.small}}</td>
+                    <td>$ {{pizza.large}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
             <h3>Toppings</h3>
-            {% for topp in Toppings %}
-            <br>
-            {{topp.name}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                {% for topp in Toppings %}
+                <tr>
+                    <td>{{topp.name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="subs" role="tabpanel" aria-labelledby="subs-tab">
             <h3>Subs</h3>
-            {% for sub in Subs %}
-            <br>
-            {{sub.name}} -- {{sub.small}} -- {{sub.large}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Small</th>
+                    <th>Large</th>
+                </tr>
+                {% for sub in Subs %}
+                <tr>
+                    <td>{{sub.name}}</td>
+                    <td>$ {{sub.small}}</td>
+                    <td>$ {{sub.large}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="pasta" role="tabpanel" aria-labelledby="pasta-tab">
             <h3>Pasta</h3>
-            {% for pasta in Pasta %}
-            <br>
-            {{pasta.name}} -- {{pasta.price}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                {% for pasta in Pasta %}
+                <tr>
+                    <td>{{pasta.name}}</td>
+                    <td>$ {{pasta.price}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="salads" role="tabpanel" aria-labelledby="salads-tab">
             <h3>Salads</h3>
-            {% for salad in Salads %}
-            <br>
-            {{salad.name}} -- {{salad.price}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                {% for salad in Salads %}
+                <tr>
+                    <td>{{salad.name}}</td>
+                    <td>$ {{salad.price}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div class="tab-pane fade" id="dinnerplatter" role="tabpanel" aria-labelledby="dinnerplatter-tab">
             <h3>Dinner Platter</h3>
-            {% for dinner in DinnerPlatter %}
-            <br>
-            {{dinner.name}} -- {{dinner.small}} -- {{dinner.large}}
-            {% endfor %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Small</th>
+                    <th>Large</th>
+                </tr>
+                {% for dinner in DinnerPlatter %}
+                <tr>
+                    <td>{{dinner.name}}</td>
+                    <td>$ {{dinner.small}}</td>
+                    <td>$ {{dinner.large}}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
 </div>

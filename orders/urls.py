@@ -9,5 +9,6 @@ urlpatterns = [
     path("homepage/", views.homepage_view, name="homepage_view"),
     path("logout/", views.logout_view, name="logout_view"),
     path("homepage/accountDetails/", views.accountDetails_view, name="accountDetails_view"),
-    path("homepage/menu/", views.menu_view, name="menu_view")
+    path("homepage/menu/", views.menu_view, name="menu_view"),
+    path("homepage/shoppinCart/", views.shoppingCart_view, name="shoppingCart_view")
 ]

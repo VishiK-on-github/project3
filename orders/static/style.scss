@@ -85,8 +85,8 @@
     min-width: 250px;
     max-width: 250px;
     background-color: rgb(80, 80, 80);
-    height: 100vh;
     padding: 15px;
+    min-height: 120vh;
 }
 
 #sidebar.active {
@@ -116,6 +116,7 @@
 
 .acc-detail {
     width: 500px;
+    max-height: 300px;
     margin: 0 auto;
     background-color: black;
     padding: 25px;
@@ -130,11 +131,16 @@
 
 .menu-div {
     background-color: black;
-    height: 600px;
     margin: 0 auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-top: 50px;
+    margin-bottom: 150px;
+    h2 {
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
 }
 
 .nav-item {
@@ -150,6 +156,25 @@
 
 .tab-pane {
     padding: 20px;
-    overflow-y: auto;
     color: white;
+
+    h3 {
+    text-align: center;
+    }
+    table {
+    margin: 0 auto;
+    }
+    tr {
+    padding: 3px;
+    }
+    th, td {
+        text-align: left;
+        padding: 10px;
+    }
+    button {
+        border: none;
+        background-color: white;
+        color: black;
+        border-radius: 3px;
+    }
 }
